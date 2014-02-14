@@ -1,3 +1,39 @@
 body {
-  background-color: hsla(350, 100%, 55%, 1.0)
+  background-color: #fdf8f8;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+/*  
+  background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, 
+    transparent 50%, transparent);
+  background-size: 2px 2px;
+*/}
+
+.smidgeo {
+  width: 640px;
+  height: 628px;
+  background-image: url("images/smidgeo_on_the_move.png");
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.get {
+  font-family: futura, 'Helvetica Neue', sans-serif;
+  font-size: 150px;
+  color: #fff;
+  padding-left: 0.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.get-one {
+  background-color: hsla(200, 80%, 25%, 1.0);
+}
+
+.get-two {
+  background-color: hsla(340, 80%, 25%, 1.0);
+}
+
+.get-three {
+  background-color: hsla(100, 80%, 25%, 1.0);
 }
