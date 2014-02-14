@@ -4,8 +4,15 @@
     ['.get-one', '.get-two', '.get-three']
   );
 
-  document.addEventListener('elCenterIsInView', function onElVisible(e) {
-    console.log(e.detail, 'is visible.');
-  });
+  document.addEventListener('elCenterMovedIntoView', 
+    function onElCenterInView(e) {
+      console.log(e.detail, '\'s center is visible.');
+    }
+  );
 
+  document.addEventListener('elCenterMovedOutOfView', 
+    function onElCenterOutOfView(e) {
+      console.log(e.detail, '\'s center is not visible.');
+    }
+  );
 })();
