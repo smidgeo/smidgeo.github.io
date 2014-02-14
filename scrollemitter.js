@@ -25,7 +25,6 @@ scrollEmitter.respondToScroll = function respondToScroll() {
 scrollEmitter.emitIfCenterOfElIsVisible = 
 function emitIfCenterOfElIsVisible(el) {
   var center = el.offsetTop + el.offsetHeight/2;
-  // console.log('Center is visible', center > this.viewTop && center < this.viewBottom);
   if (center > this.viewTop && center < this.viewBottom) {
     var visibleEvent = new CustomEvent('elCenterIsInView', {detail: el});
     document.dispatchEvent(visibleEvent);    
