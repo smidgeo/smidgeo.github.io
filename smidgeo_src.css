@@ -82,7 +82,7 @@ ul {
 }
 
 .get-two.in-spotlight {
-  background-color: hsla(340, 80%, 25%, 1);
+  background-color: hsla(0, 80%, 25%, 1);
   transition: background-color 3s;
 }
 
@@ -94,13 +94,15 @@ ul {
 .get-concept {
   opacity: 0;
   z-index: 2;
+  font-family: jubilat, serif;
+  font-size: smaller;
+  font-style: italic;
 }
 
 .in-spotlight .get-concept {
   opacity: 1;
   transition: opacity 1.5s 0.5s;
 }
-
 
 @media all and (max-width: 480px) {
   .get {
