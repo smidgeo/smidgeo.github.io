@@ -7,7 +7,8 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, 
     transparent 50%, transparent);
   background-size: 2px 2px;
-*/}
+*/
+}
 
 
 ul {
@@ -15,30 +16,27 @@ ul {
 }
 
 .smidgeo {
-  width: 640px;
   height: 628px;
   background-image: url("images/smidgeo_on_the_move.png");
   background-repeat: no-repeat;
+  background-position: 300%, 80%;
   opacity: 0.9;
-  margin-left: 100%;
 }
 
 .in-spotlight .smidgeo {
   animation-duration: 3s;
-  animation-name: slidein;
-  margin-left: 0%;
+  animation-name: slidein-from-right;
+  background-position: 100%, 80%;
   width: 100%;  
 }
 
-@keyframes slidein {
+@keyframes slidein-from-right {
   from {
-    margin-left: 100%;
-    width: 300%; 
+    background-position: 300%, 80%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    background-position: 100%, 80%;
   }
 }
 
