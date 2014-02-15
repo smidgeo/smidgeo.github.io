@@ -72,6 +72,17 @@ ul {
   transition: background-color 3s;
 }
 
+.get-concept {
+  opacity: 0;
+  z-index: 2;
+}
+
+.in-spotlight .get-concept {
+  opacity: 1;
+  transition: opacity 1.5s 0.5s;
+}
+
+
 @media all and (max-width: 480px) {
   .get {
     font-size: 75px;
