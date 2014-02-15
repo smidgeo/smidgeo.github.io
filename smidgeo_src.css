@@ -122,6 +122,11 @@ ul {
   border-radius: 120px;
 }
 
+a {
+  color: #af8006;
+  text-decoration: none;
+}
+
 @media all and (max-width: 480px) {
   .get {
     font-size: 75px;
