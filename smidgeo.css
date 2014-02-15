@@ -28,6 +28,8 @@ ul {
   animation-duration: 3s;
   -webkit-animation-name: slidein;
   animation-name: slidein;
+  margin-left: 0%;
+  width: 100%;
 }
 
 @-webkit-keyframes slidein {
