@@ -16,10 +16,12 @@ ul {
 
 .smidgeo {
   height: 628px;
-  background-image: url("images/smidgeo_on_the_move.png");
+  width: 640px;
+  background-image: url('images/smidgeo_on_the_move.png');
   background-repeat: no-repeat;
-  background-position: 300%, 80%;
+  background-position: 1600px -628px;
   opacity: 0.9;
+  position: absolute;
 }
 
 .in-spotlight .smidgeo {
@@ -27,27 +29,26 @@ ul {
   animation-duration: 3s;
   -webkit-animation-name: slidein-from-right;
   animation-name: slidein-from-right;
-  background-position: 100%, 80%;
-  width: 100%;
+  background-position: 0px 0px;
 }
 
 @-webkit-keyframes slidein-from-right {
   from {
-    background-position: 300%, 80%;
+    background-position: 1600px -628px;
   }
 
   to {
-    background-position: 100%, 80%;
+    background-position: 0px 0px;
   }
 }
 
 @keyframes slidein-from-right {
   from {
-    background-position: 300%, 80%;
+    background-position: 1600px -628px;
   }
 
   to {
-    background-position: 100%, 80%;
+    background-position: 0px 0px;
   }
 }
 
@@ -57,26 +58,26 @@ ul {
   color: #fff;
   padding-left: 0.5em;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   background-color: hsla(200, 0%, 36%, 1.0);
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
 
 .get-one.in-spotlight {
-  background-color: hsla(200, 80%, 25%, 1.0);
+  background-color: hsla(200, 80%, 25%, 0.5);
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
 }
 
 .get-two.in-spotlight {
-  background-color: hsla(340, 80%, 25%, 1.0);
+  background-color: hsla(340, 80%, 25%, 0.5);
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
 }
 
 .get-three.in-spotlight {
-  background-color: hsla(100, 80%, 25%, 1.0);
+  background-color: hsla(100, 80%, 25%, 0.5);
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
 }
