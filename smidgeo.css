@@ -24,16 +24,22 @@ body {
   padding-left: 0.5em;
   padding-top: 2em;
   padding-bottom: 2em;
+
+  background-color: hsla(200, 0%, 36%, 1.0);
+  transition: background-color 1s;
 }
 
-.get-one {
+.get-one.in-spotlight {
   background-color: hsla(200, 80%, 25%, 1.0);
+  transition: background-color 3s;
 }
 
-.get-two {
+.get-two.in-spotlight {
   background-color: hsla(340, 80%, 25%, 1.0);
+  transition: background-color 3s;
 }
 
-.get-three {
+.get-three.in-spotlight {
   background-color: hsla(100, 80%, 25%, 1.0);
+  transition: background-color 3s;
 }
