@@ -71,9 +71,7 @@ ul {
   color: #fff;
   padding-left: 0.5em;
   padding-top: 0.25em;
-  /*padding-bottom: 0.5em;*/
   z-index: 1;
-  background-color: hsla(200, 0%, 36%, 1);
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
