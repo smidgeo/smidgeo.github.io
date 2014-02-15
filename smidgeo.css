@@ -22,41 +22,47 @@ ul {
   height: 628px;
   width: 640px;
   left: 1600px;
-  top: -628px;
-  opacity: 0.9;
+  top: -728px;
+  opacity: 0.5;
   position: relative;
   z-index: 10;
 }
 
 .smidgeo.second {
-  top: -1216px;
+  top: -1316px;
   z-index: 11;
 }
 
 .smidgeo.third {
-  top: -1604px;
+  top: -1904px;
   z-index: 12;
 }
 
 .in-spotlight .smidgeo.first {
-  -webkit-transition: left 0.4s ease-out 0s, top 0.4s ease-out 0s;
-  transition: left 0.4s ease-out 0s, top 0.4s ease-out 0s;
+  -webkit-transition: left 0.15s ease-out 0s, top 0.15s ease-out 0s, opacity 0.5s 0.15s;
+  transition: left 0.15s ease-out 0s, top 0.15s ease-out 0s, opacity 0.5s 0.15s;
   left: 120px;
   top: -160px;
+  opacity: 0;
 }
 
 .in-spotlight .smidgeo.second {
-  -webkit-transition: left 0.4s ease-out 0.4s, top 0.4s ease-out 0.4s;
-  transition: left 0.4s ease-out 0.4s, top 0.4s ease-out 0.4s;
+  -webkit-transition: left 0.15s ease-out 0.15s, top 0.15s ease-out 0.15s, opacity 0.5s 0.15s;
+  transition: left 0.15s ease-out 0.15s, top 0.15s ease-out 0.15s, opacity 0.5s 0.15s;
   left: 120px;
   top: -788px;
+  opacity: 0;
 }
 
 .in-spotlight .smidgeo.third {
-  -webkit-transition: left 1s ease-out 0.8s, top 1s ease-out 0.8s;
-  transition: left 1s ease-out 0.8s, top 1s ease-out 0.8s;
+  /* Starts before the second transition finishes. */
+  -webkit-transition: left 0.5s ease-in 0.15s, top 0.5s ease-in 0.15s, 
+    opacity 2s ease-out 0.15s;
+  transition: left 0.5s ease-in 0.15s, top 0.5s ease-in 0.15s, 
+    opacity 2s ease-out 0.15s;
   left: 120px;
   top: -1416px;
+  opacity: 1;
 }
 
 .get {
