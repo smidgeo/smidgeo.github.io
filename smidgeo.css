@@ -14,6 +14,10 @@ ul {
   padding-left: 0;
 }
 
+.smidgeos {
+  height: 440px;
+}
+
 .smidgeo {
   height: 628px;
   width: 640px;
@@ -21,41 +25,38 @@ ul {
   top: -628px;
   opacity: 0.9;
   position: relative;
-  z-index: 3;
-  margin-bottom: -140px;
+  z-index: 10;
 }
 
-.in-spotlight .smidgeo {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-name: slidein-from-right;
-  animation-name: slidein-from-right;
-  left: 0px;
+.smidgeo.second {
+  top: -1216px;
+  z-index: 11;
+}
+
+.smidgeo.third {
+  top: -1604px;
+  z-index: 12;
+}
+
+.in-spotlight .smidgeo.first {
+  -webkit-transition: left 0.4s ease-out 0s, top 0.4s ease-out 0s;
+  transition: left 0.4s ease-out 0s, top 0.4s ease-out 0s;
+  left: 120px;
   top: -160px;
 }
 
-@-webkit-keyframes slidein-from-right {
-  from {
-    left: 1600px;
-    top: -628px;
-  }
-
-  to {
-    left: 0px;
-    top: -160px;
-  }
+.in-spotlight .smidgeo.second {
+  -webkit-transition: left 0.4s ease-out 0.4s, top 0.4s ease-out 0.4s;
+  transition: left 0.4s ease-out 0.4s, top 0.4s ease-out 0.4s;
+  left: 120px;
+  top: -788px;
 }
 
-@keyframes slidein-from-right {
-  from {
-    left: 1600px;
-    top: -628px;
-  }
-
-  to {
-    left: 0px;
-    top: -160px;
-  }
+.in-spotlight .smidgeo.third {
+  -webkit-transition: left 1s ease-out 0.8s, top 1s ease-out 0.8s;
+  transition: left 1s ease-out 0.8s, top 1s ease-out 0.8s;
+  left: 120px;
+  top: -1416px;
 }
 
 .get {
@@ -105,8 +106,27 @@ ul {
     font-size: 75px;
   }
 
+  .smidgeos {
+    height: 220px;
+  }
+
   .smidgeo {
     height: 314px;
     width: 320px;
+  }
+
+  .in-spotlight .smidgeo.first {
+    left: 0px;
+    top: -160px;
+  }
+
+  .in-spotlight .smidgeo.second {
+    left: 0px;
+    top: -474px;
+  }
+
+  .in-spotlight .smidgeo.third {
+    left: 0px;
+    top: -788px;
   }
 }
