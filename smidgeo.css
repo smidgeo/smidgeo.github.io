@@ -125,6 +125,10 @@ ul {
   font-weight: lighter;
 }
 
+.headshot {
+  border-radius: 120px;
+}
+
 @media all and (max-width: 480px) {
   .get {
     font-size: 75px;
