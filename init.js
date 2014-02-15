@@ -14,7 +14,7 @@
 
   var scrollEmitter = createScrollEmitter();
   scrollEmitter.watchElementsWithSelectors(
-    ['.get-one', '.get-two', '.get-three']
+    ['.get-one', '.get-two', '.get-three', '.get-final']
   );
 
   document.addEventListener('elCenterMovedIntoView', 
