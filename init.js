@@ -20,13 +20,6 @@
   document.addEventListener('elCenterMovedIntoView', 
     function onElCenterInView(e) {
       e.detail.classList.add('in-spotlight');
-      document.querySelectorAll('.get').forEach(function removeSpotlight(el) {
-        if (el !== e.detail) {
-          el.classList.remove('in-spotlight');
-        }
-      });
-
-      console.log(e.detail, '\'s center is visible.');
     }
   );
 
