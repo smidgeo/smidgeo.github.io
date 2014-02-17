@@ -1,0 +1,25 @@
+{
+  "name": "smidgeo.com",
+  "version": "0.1.0",
+  "description": "Smidgeo informations",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smidgeo/smidgeo.github.io"
+  },
+  "keywords": [
+    "smidgeo"
+  ],
+  "author": "Smidgeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smidgeo/smidgeo.github.io/issues"
+  },
+  "homepage": "https://github.com/smidgeo/smidgeo.github.io",
+  "dependencies": {
+    "scrollwatcher": "~0.1.0"
+  }
+}

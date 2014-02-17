@@ -12,7 +12,7 @@
     }
   };
 
-  var scrollEmitter = createScrollEmitter();
+  var scrollEmitter = createScrollWatcher();
   scrollEmitter.watchElementsWithSelectors(
     ['.get-one', '.get-two', '.get-three', '.get-final']
   );
