@@ -42,10 +42,7 @@
 
   document.addEventListener('elMovedIntoView', 
     function onElCenterInView(e) {
-      setTimeout(function addSpotlight() {
-        e.detail.classList.add('in-spotlight');
-      },
-      400);
+      e.detail.classList.add('in-spotlight');
     }
   );
 
