@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/smidgeo/smidgeo.github.io",
   "dependencies": {
-    "scrollwatcher": "~0.1.0"
+    "scrollwatcher": "~0.2.0"
   }
 }
