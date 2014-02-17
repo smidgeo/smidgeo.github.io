@@ -1,7 +1,6 @@
 function createScrollWatcher() {
 
 var scrollWatcher = {
-  elementsToWatch: [],
   elementWatchInstances: [],
   elementLastVisibleStates: [],
   viewTop: 0,
@@ -13,7 +12,7 @@ scrollWatcher.init = function init() {
 };
 
 scrollWatcher.watchElements = function watchElements(watchDefinitions) {
-  this.elementsWatchInstances = watchDefinitions.map(function makeInstance(def) {
+  this.elementWatchInstances = watchDefinitions.map(function makeInstance(def) {
     return {
       el: document.querySelector(def.selector),
       isInView: def.isInViewFunction
@@ -28,11 +27,11 @@ scrollWatcher.respondToScroll = function respondToScroll() {
   this.viewTop = document.body.scrollTop;
   this.viewBottom = this.viewTop + window.innerHeight;
 
-  this.elementsWatchInstances.forEach(this.emitIfConsideredVisible.bind(this));
+  this.elementWatchInstances.forEach(this.emitIfConsideredVisible.bind(this));
 };
 
 scrollWatcher.emitIfConsideredVisible = function emitIfConsideredVisible(watch) {  
-  var index = this.elementsToWatch.indexOf(watch.el);
+  var index = this.elementWatchInstances.indexOf(watch);
   var checkVisible = watch.isInView;
   if (!checkVisible) {
     checkVisible = centerIsVisible;

@@ -18,8 +18,8 @@
     return !(bottomThreshold < viewTop || topThreshold > viewBottom);
   }
 
-  var scrollEmitter = createScrollWatcher();
-  scrollEmitter.watchElements(
+  var scrollWatcher = createScrollWatcher();
+  scrollWatcher.watchElements(
     [
       {
         selector: '.get-one', 
@@ -47,6 +47,6 @@
   );
 
   // Initial sync of what's in-view and the in-spotlight class.
-  scrollEmitter.respondToScroll();
+  scrollWatcher.respondToScroll();
 
 })();
