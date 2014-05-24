@@ -10,18 +10,14 @@ function flowController(opts) {
     root: d3.select('#block-layer'),
     width: 800,
     height: 600,
-    r: 18,
+    r: 25,
     nodeClass: 'tagbox',
     nodeElementName: 'text',
     xAttr: 'x',
     yAttr: 'y',
     processSelection: function setText() {
       d3.select(this).text('$');
-    },
-    useRectForCollision: true,
-    rectRecoilFactor: 0.2,
-    maxRectWidth: 30,
-    maxRectHeight: 20
+    }
   });
 
   function moveWordIntoParserBox(word, source, done) {
@@ -116,33 +112,19 @@ function flowController(opts) {
     });
   }
   
-  function addWordGroups() {
-    var groupsOfWordsAdded = 0;
+  function addWords(words) {
+    var wordsAdded = 0;
 
-    function addWords(error, words) {
-      var wordsAdded = 0;
-
-      function addWord() {
-        moveWordFromReaderToParser(words[wordsAdded]);
-        wordsAdded += 1;
-        if (wordsAdded >= words.length) {
-          clearInterval(wordIntervalKey);
-        }
-      }
-
-      addWord();
-      var wordIntervalKey = setInterval(addWord, 4000);
-
-      if (groupsOfWordsAdded > 2) {
-        clearInterval(groupIntervalKey);
+    function addWord() {
+      moveWordFromReaderToParser(words[wordsAdded]);
+      wordsAdded += 1;
+      if (wordsAdded >= words.length) {
+        clearInterval(wordIntervalKey);
       }
     }
 
-    function fetchWords() {
-      wordgetter.getWords(3, addWords);
-    }
-    var groupIntervalKey = setInterval(fetchWords, 18000);
-    fetchWords();
+    addWord();
+    var wordIntervalKey = setInterval(addWord, 4000);
   }
 
   function startMotion() {
@@ -150,27 +132,29 @@ function flowController(opts) {
     function renderInternetResponse() {
       var boxCenterX = +readerBox.attr('x') + readerBox.attr('width')/2;
       mover.moveTextAlongCurve({
-        text: 'Response from Internet!',
+        text: wordgetter.getSocial(),
         layer: d3.select('#chunk-layer'),
         source: {
           x: boxCenterX - 200,
-          y: -200
+          y: 700
         },
         target: {
           x: boxCenterX - 100,
           y: +readerBox.attr('y') + +readerBox.attr('height')/2
         },
         duration: 3500,
-        done: addWordGroups
+        done: function getWords() {
+          addWords([wordgetter.getResource(), wordgetter.getResource()]);
+        }
       });
 
       internetResponses += 1;
-      if (internetResponses > 2) {
+      if (internetResponses > 10) {
         clearInterval(internetKey);
       }
     }
     renderInternetResponse();
-    var internetKey = setInterval(renderInternetResponse, 60000);
+    var internetKey = setInterval(renderInternetResponse, 5000);
   }
 
   
