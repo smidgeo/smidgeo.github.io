@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Smidgeo Business Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link href="../smidgeo.css" rel="stylesheet" type="text/css"></link>
+
+  <script type="text/javascript">
+  (function(d) {
+    var config = {
+      kitId: 'nek1reg',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+<style>
+  .tagbox {
+    font-size: 32px;
+  }
+
+  .pipe {
+    fill: hsla(0, 100%, 0%, 0.0);
+    stroke-width: 1;
+    stroke: #888;
+  }
+
+  svg {
+    font-size: 20px;
+  }
+
+  svg text {
+    fill: #585858;
+  }
+
+  .station {
+    stroke: #777;
+    stroke-width: 3;
+    fill: #fff;
+  }
+
+  .station-label {
+    font-size: 24px;
+    text-align: center;
+    text-anchor: middle;
+  }
+
+  #block-layer text {
+    fill: hsl(0, 60%, 60%);
+  }
+</style>
+
+</head>
+
+<body>
+
+<a name="stream-overload-diagram-anchor"></a>
+
+<svg width="800" height="600" id="stream-overload-diagram">
+  <defs>
+    <radialGradient id="sphere-gradient">
+      <stop offset="0" stop-color="hsl(30, 100%, 80%)"/>
+      <stop offset="0.75" stop-color="hsl(20, 100%, 60%)">
+        <animate attributeName="offset" values="0.75;0.9;0.75" keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="1" stop-color="hsl(10, 100%, 50%)">
+        <animate attributeName="stop-color" values="hsl(10, 100%, 50%);hsl(40, 100%, 70%);hsl(10, 100%, 50%)" keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </radialGradient>
+
+    <linearGradient id="pipe-gradient" x1="0" y1="0" x2="100%", y2="0">
+      <stop offset="0" stop-color="hsl(200, 100%, 10%)" />
+      <stop offset="0.5" stop-color="hsl(180, 100%, 20%)">
+        <animate attributeName="offset" values="0.5;0.9;0.5" keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="1" stop-color="hsl(200, 100%, 30%)">
+      </stop>
+    </linearGradient>
+  </defs>
+  <g class="background-layer">
+  </g>
+  <g id="chunk-layer">
+  </g>
+  <g id="static-layer">
+    <g>
+      <rect id="reader" x="30" y="300" width="200" height="120" 
+      class="station" />
+      <text x="30" dx="4.2em" y="300" dy="2.8em" width="200" class="station-label">Internet requester</text>
+    </g>
+
+    <g>
+      <path d=" M 250 4
+                L 440 4
+                L 345 154
+                Z"
+            class="station"
+            id="parser" x="250" y="4" width="100" height="100" />
+      <text x="250" y="4" dx="4em" dy="2.35em" class="station-label">Parser</text>
+    </g>
+
+    <g>
+      <circle id="renderer" x="525" y="175" width="150" height="150"
+      r="75" cx="600" cy="250" class="station"></circle>
+      <text x="525" y="175" dx="3.1em" dy="2.25em" class="station-label">Renderer</text>
+    </g>
+  </g>
+  <g id="block-layer">
+  </g>
+
+</svg>
+
+<script src="d3.v3.min.js"></script>
+<script src="basicrequest.js"></script>
+<script src="wordgetter.js"></script>
+<script src="scrollwatcher.js"></script>
+<script src="gravitybox.js"></script>
+<script src="idmaker.js"></script>
+<script src="mover.js"></script>
+<script src="flowcontroller.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48081995-1', 'smidgeo.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
