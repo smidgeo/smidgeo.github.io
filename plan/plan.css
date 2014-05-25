@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("flaticon.eot");
+  src: url("flaticon.eot#iefix") format("embedded-opentype"),
+  url("flaticon.woff") format("woff"),
+  url("flaticon.ttf") format("truetype"),
+  url("flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.tagbox {
+  font-size: 32px;
+}
+
+.pipe {
+  fill: hsla(0, 100%, 0%, 0.0);
+  stroke-width: 1;
+  stroke: #888;
+}
+
+svg {
+  font-size: 20px;
+  font-family: futura, sans-serif;
+}
+
+svg text {
+  fill: #585858;
+}
+
+.station {
+  stroke: #777;
+  stroke-width: 3;
+  fill: #fff;
+}
+
+.station-label {
+  font-size: 24px;
+  text-align: center;
+  text-anchor: middle;
+}
+
+#block-layer text {
+  font-size: 72px;
+  fill: hsl(130, 70%, 60%);
+}
