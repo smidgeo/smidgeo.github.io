@@ -1,19 +1,12 @@
 @font-face {
   font-family: "Flaticon";
-  src: url("flaticon.eot");
-  src: url("flaticon.eot#iefix") format("embedded-opentype"),
-  url("flaticon.woff") format("woff"),
-  url("flaticon.ttf") format("truetype"),
-  url("flaticon.svg") format("svg");
+  src: url("../Flaticon_WebFont/flaticon.eot");
+  src: url("../Flaticon_WebFont/flaticon.eot#iefix") format("embedded-opentype"),
+  url("../Flaticon_WebFont/flaticon.woff") format("woff"),
+  url("../Flaticon_WebFont/flaticon.ttf") format("truetype"),
+  url("../Flaticon_WebFont/flaticon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
-}
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
 }
 
 .tagbox {
@@ -35,6 +28,13 @@ svg text {
   fill: #585858;
 }
 
+.moving-concept {
+  fill: white;
+  font-family: Flaticon;
+  font-size: 48px;
+  margin-left: 20px;
+}
+
 .station {
   stroke: #777;
   stroke-width: 3;
@@ -50,4 +50,13 @@ svg text {
 #block-layer text {
   font-size: 72px;
   fill: hsl(130, 70%, 60%);
+}
+
+footer {
+  margin-top: 5em;
+  color: #666;
+}
+
+footer a {
+  color: #888;
 }

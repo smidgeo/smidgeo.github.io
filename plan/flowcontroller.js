@@ -23,6 +23,7 @@ function flowController(opts) {
   function moveWordIntoParserBox(word, source, done) {
     mover.moveTextAlongCurve({
       text: word,
+      textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: source,
       target: {
@@ -33,24 +34,6 @@ function flowController(opts) {
       ease: d3.ease('linear'),
       done: done
     });
-  }
-
-  function breakWordIntoTokens(word) {
-    function renderChar(char) {
-      return opts.chunkLayer.append('text')
-        .text(char)
-        .attr({
-          x: wordX,
-          y: wordY
-        });
-    }
-
-    var wordText = word.text();
-    var wordX = word.attr('x');
-    var wordY = word.attr('y');
-
-    word.remove();
-    return wordText.split('').map(renderChar);
   }
 
   function addBlock() {
@@ -88,14 +71,15 @@ function flowController(opts) {
 
     function next(wordRendition) {
       wordRendition.remove();
-      var letters = theWord.split('');
-      letters.forEach(moveLetterFromParserBoxToRendererBox);
+      var solutions = wordgetter.getSolutions(~~(Math.random()  * 7));
+      solutions.forEach(moveLetterFromParserBoxToRendererBox);
     }
   }
 
   function moveLetterFromParserBoxToRendererBox(letter, i) {
     mover.moveTextAlongCurve({
       text: letter,
+      textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: {
         x: +parserBox.attr('x') + 0.8 * parserBox.attr('width') + i * 10,
@@ -133,6 +117,7 @@ function flowController(opts) {
       var boxCenterX = +readerBox.attr('x') + readerBox.attr('width')/2;
       mover.moveTextAlongCurve({
         text: wordgetter.getSocial(),
+        textClass: 'moving-concept',
         layer: d3.select('#chunk-layer'),
         source: {
           x: boxCenterX - 200,
@@ -144,12 +129,12 @@ function flowController(opts) {
         },
         duration: 3500,
         done: function getWords() {
-          addWords([wordgetter.getResource(), wordgetter.getResource()]);
+          addWords(wordgetter.getTecmologies(1));
         }
       });
 
       internetResponses += 1;
-      if (internetResponses > 10) {
+      if (internetResponses > 50) {
         clearInterval(internetKey);
       }
     }

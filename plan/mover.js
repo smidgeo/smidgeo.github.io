@@ -32,10 +32,11 @@ function createMover() {
       d: bezierFactory({source: opts.source, target: opts.target})
     });
 
-    var textRendition = opts.layer.append('text').text(opts.text)
+    var textRendition = opts.layer.append('text').html(opts.text)
       .attr('transform', function translate(d) {
         return 'translate(' + opts.source.x + ', ' + opts.source.y + ')';
-      });
+      })
+      .classed(opts.textClass, true);
 
     textRendition
       .transition()
