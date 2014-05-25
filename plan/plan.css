@@ -37,7 +37,7 @@ svg text {
 
 .station {
   stroke: #777;
-  stroke-width: 3;
+  /*stroke-width: 3;*/
   fill: #fff;
 }
 

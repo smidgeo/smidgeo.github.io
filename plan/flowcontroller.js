@@ -27,8 +27,8 @@ function flowController(opts) {
       layer: d3.select('#chunk-layer'),
       source: source,
       target: {
-        x: +parserBox.attr('x') + parserBox.attr('width')/2,
-        y: +parserBox.attr('y') + parserBox.attr('height')/2
+        x: +parserBox.attr('x') + parserBox.attr('width') * 1.5,
+        y: +parserBox.attr('y') + parserBox.attr('height') * 1.2
       },
       duration: 1500,
       ease: d3.ease('linear'),
@@ -82,8 +82,8 @@ function flowController(opts) {
       textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: {
-        x: +parserBox.attr('x') + 0.8 * parserBox.attr('width') + i * 10,
-        y: +parserBox.attr('y') + 1.1 * parserBox.attr('height') - i * 15
+        x: +parserBox.attr('x') + 1.4 * parserBox.attr('width') + i * 10,
+        y: +parserBox.attr('y') + 1.5 * parserBox.attr('height') - i * 15
       },
       target: {
         x: +rendererBox.attr('x') + rendererBox.attr('width')/4 + i * 10,
