@@ -9,7 +9,7 @@ function flowController(opts) {
   var gravitybox = createGravityBox({
     root: d3.select('#block-layer'),
     width: 800,
-    height: 600,
+    height: 620,
     r: 25,
     nodeClass: 'tagbox',
     nodeElementName: 'text',
