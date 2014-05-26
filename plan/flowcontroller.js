@@ -120,11 +120,11 @@ function flowController(opts) {
         textClass: 'moving-concept',
         layer: d3.select('#chunk-layer'),
         source: {
-          x: boxCenterX - 200,
+          x: boxCenterX - 100,
           y: 700
         },
         target: {
-          x: boxCenterX - 100,
+          x: boxCenterX,
           y: +readerBox.attr('y') + +readerBox.attr('height')/2
         },
         duration: 3500,

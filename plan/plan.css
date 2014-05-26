@@ -48,17 +48,42 @@ svg text {
 }
 
 #cloud {
-  stroke: #000;
-  stroke-width: 2px;
+  stroke: #101418;
+  stroke-width: 3px;
 }
 
 .renderer-label {
-  fill: #888;
+  fill: #101418;
+}
+
+.parser-label {
+  fill: #101418;
 }
 
 #block-layer text {
   font-size: 72px;
   fill: hsl(130, 70%, 60%);
+}
+
+#smocial-icon {
+  stroke: none;
+  fill: #101418;
+}
+
+#outer-balloon {
+  fill: #101418;
+}
+
+#smocial-icon g > :not(#outer-balloon) path {
+  fill: #282a30;
+}
+
+#smocial-tired {
+  fill: #282a30;
+}
+
+#outer-balloon ellipse {
+  fill: white;
 }
 
 footer {
