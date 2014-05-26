@@ -25,7 +25,7 @@ svg {
 }
 
 svg text {
-  fill: #585858;
+  fill: white;
 }
 
 .moving-concept {
@@ -45,6 +45,15 @@ svg text {
   font-size: 24px;
   text-align: center;
   text-anchor: middle;
+}
+
+#cloud {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.renderer-label {
+  fill: #888;
 }
 
 #block-layer text {
