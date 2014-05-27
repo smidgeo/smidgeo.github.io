@@ -78,7 +78,7 @@ function flowController(opts) {
 
   function moveLetterFromParserBoxToRendererBox(letter, i) {
     mover.moveConceptAlongCurve({
-      text: letter,
+      concept: letter,
       textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: {
@@ -116,7 +116,7 @@ function flowController(opts) {
     function renderInternetResponse() {
       var boxCenterX = +readerBox.attr('x') + readerBox.attr('width')/2;
       mover.moveConceptAlongCurve({
-        text: wordgetter.getSocial(),
+        concept: wordgetter.getSocial(),
         textClass: 'moving-concept',
         layer: d3.select('#chunk-layer'),
         source: {
