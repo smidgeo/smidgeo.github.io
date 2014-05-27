@@ -9,6 +9,18 @@
   font-style: normal;
 }
 
+.content {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 1000px;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
 .tagbox {
   font-size: 32px;
 }
