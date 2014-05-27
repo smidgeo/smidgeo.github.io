@@ -21,8 +21,8 @@ function flowController(opts) {
   });
 
   function moveWordIntoParserBox(word, source, done) {
-    mover.moveTextAlongCurve({
-      text: word,
+    mover.moveConceptAlongCurve({
+      concept: word,
       textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: source,
@@ -77,7 +77,7 @@ function flowController(opts) {
   }
 
   function moveLetterFromParserBoxToRendererBox(letter, i) {
-    mover.moveTextAlongCurve({
+    mover.moveConceptAlongCurve({
       text: letter,
       textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
@@ -115,7 +115,7 @@ function flowController(opts) {
     var internetResponses = 0;
     function renderInternetResponse() {
       var boxCenterX = +readerBox.attr('x') + readerBox.attr('width')/2;
-      mover.moveTextAlongCurve({
+      mover.moveConceptAlongCurve({
         text: wordgetter.getSocial(),
         textClass: 'moving-concept',
         layer: d3.select('#chunk-layer'),

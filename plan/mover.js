@@ -11,7 +11,7 @@ function createMover() {
   // done: The function to call when the move is complete.
 
   // Assumes there is a 'defs' element.
-  function moveTextAlongCurve(opts) {
+  function moveConceptAlongCurve(opts) {
     if (!opts.duration) {
       opts.duration = 2000;
     }
@@ -32,7 +32,8 @@ function createMover() {
       d: bezierFactory({source: opts.source, target: opts.target})
     });
 
-    var textRendition = opts.layer.append('text').html(opts.text)
+    var textRendition = opts.layer.append('use')
+      .attr('xlink:href', '#' + opts.concept)
       .attr('transform', function translate(d) {
         return 'translate(' + opts.source.x + ', ' + opts.source.y + ')';
       })
@@ -71,6 +72,6 @@ function createMover() {
   }
 
   return {
-    moveTextAlongCurve: moveTextAlongCurve
+    moveConceptAlongCurve: moveConceptAlongCurve
   };
 }
