@@ -52,8 +52,16 @@ scrollWatcher.emitIfConsideredVisible = function emitIfConsideredVisible(watch) 
   this.elementLastVisibleStates[index] = isVisible;
 };
 
-function centerIsVisible(viewTop, viewBottom, el) {
+function centerIsVisible(viewTop, viewBottom, el) {  
   var center = el.offsetTop + el.offsetHeight/2;
+
+  // In Firefox SVGs will not have these properties.
+  if ((el.offsetTop === undefined || el.offsetHeight === undefined) &&
+    el.nodeName === 'svg') {
+
+    center = el.parentNode.offsetTop + el.parentNode.offsetHeight/2;
+  }
+
   return (center > viewTop && center < viewBottom);
 }
 
