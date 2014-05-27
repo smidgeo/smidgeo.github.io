@@ -161,6 +161,16 @@ function flowController(opts) {
     document.addEventListener('elMovedIntoView', onElCenterInView);
   })());
 
+  ((function scaleOuterLayer() {
+    var clientWidth = document.body.clientWidth;
+    var scale = 1.0;
+    if (clientWidth < 800) {
+      scale = clientWidth/800;
+      d3.select('#outer-layer')
+        .attr('transform', 'translate(0, 0) scale(' + scale + ')');
+    }
+  })());
+
   return {
   };
 }
