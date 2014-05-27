@@ -99,6 +99,9 @@ svg text {
 }
 
 footer {
+  font-family: museo-sans, sans-serif;
+  font-size: 12px;
+
   margin-top: 5em;
   color: #666;
 }
@@ -106,3 +109,20 @@ footer {
 footer a {
   color: #888;
 }
+
+.title {
+  color: white;
+  font-size: 80px;
+}
+
+.jibba-jabba {
+  color: white;
+  margin: 1em;
+}
+
+@media all and (max-width: 480px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
