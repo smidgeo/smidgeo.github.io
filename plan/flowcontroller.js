@@ -142,6 +142,11 @@ function flowController(opts) {
     var internetKey = setInterval(renderInternetResponse, 5000);
   }
 
+  function anyPartIsShowing(viewTop, viewBottom, el) {
+    var topThreshold = 0;
+    var bottomThreshold = el.offsetTop + el.offsetHeight;
+    return !(bottomThreshold < viewTop || topThreshold > viewBottom);
+  }
   
   ((function watchForScrollIntoView() {
     function onElCenterInView(e) {
@@ -153,7 +158,8 @@ function flowController(opts) {
     scrollWatcher.watchElements(
       [
         {
-          selector: '#stream-overload-diagram'
+          selector: '#stream-overload-diagram',
+          isInViewFunction: anyPartIsShowing
         }
       ]
     );
