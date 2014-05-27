@@ -27,7 +27,7 @@ function flowController(opts) {
       layer: d3.select('#chunk-layer'),
       source: source,
       target: {
-        x: +parserBox.attr('x') + parserBox.attr('width') * 1.5,
+        x: +parserBox.attr('x') - parserBox.attr('width') * 0.2,
         y: +parserBox.attr('y') + parserBox.attr('height') * 1.2
       },
       duration: 1500,
@@ -39,8 +39,8 @@ function flowController(opts) {
   function addBlock() {
     gravitybox.add([
       {
-        x: +rendererBox.attr('x') + 20,
-        y: +rendererBox.attr('y') + 0.6 * rendererBox.attr('height'),
+        x: +rendererBox.attr('x') + rendererBox.attr('width') * 0.7,
+        y: +rendererBox.attr('y') + 1.8 * rendererBox.attr('height'),
         width: 72,
         height: 30,
         attrs: {
@@ -71,7 +71,7 @@ function flowController(opts) {
 
     function next(wordRendition) {
       wordRendition.remove();
-      var solutions = wordgetter.getSolutions(~~(Math.random()  * 7));
+      var solutions = wordgetter.getSolutions(~~(Math.random() * 10));
       solutions.forEach(moveLetterFromParserBoxToRendererBox);
     }
   }
@@ -82,12 +82,12 @@ function flowController(opts) {
       textClass: 'moving-concept',
       layer: d3.select('#chunk-layer'),
       source: {
-        x: +parserBox.attr('x') + 1.4 * parserBox.attr('width') + i * 10,
-        y: +parserBox.attr('y') + 1.5 * parserBox.attr('height') - i * 15
+        x: +parserBox.attr('x') + -0.1 * parserBox.attr('width') + i * 10,
+        y: +parserBox.attr('y') + 1.5 * parserBox.attr('height') - i * 12
       },
       target: {
-        x: +rendererBox.attr('x') + rendererBox.attr('width')/4 + i * 10,
-        y: +rendererBox.attr('y') + 0.8 * rendererBox.attr('height') - i * 15
+        x: +rendererBox.attr('x') + rendererBox.attr('width')/2 + i * 10,
+        y: +rendererBox.attr('y') + 1.0 * rendererBox.attr('height') - i * 15
       },
       delay: 150 * i,
       done: function letterMoved(letterRendition) {
@@ -120,8 +120,8 @@ function flowController(opts) {
         textClass: 'moving-concept',
         layer: d3.select('#chunk-layer'),
         source: {
-          x: boxCenterX - 100,
-          y: 700
+          x: 900,
+          y: 50
         },
         target: {
           x: boxCenterX,
