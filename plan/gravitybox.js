@@ -181,7 +181,7 @@ function createGravityBox(opts) {
         d.x = Math.max(0, Math.min(w - d.attrs.width, d.x));
       }
       else {
-        d.x = Math.max(r, Math.min(w - r, d.x));
+        d.x = Math.max(0, Math.min(w - r, d.x));
       }
     }
     return d.x;
