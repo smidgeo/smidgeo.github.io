@@ -17,7 +17,8 @@ function flowController(opts) {
     yAttr: 'y',
     processSelection: function setText() {
       d3.select(this).text('$');
-    }
+    },
+    rectRecoilFactor: 3.0
   });
 
   function moveWordIntoParserBox(word, source, done) {
@@ -71,7 +72,7 @@ function flowController(opts) {
 
     function next(wordRendition) {
       wordRendition.remove();
-      var solutions = wordgetter.getSolutions(~~(Math.random() * 10));
+      var solutions = wordgetter.getSolutions(~~(Math.random() * 15));
       solutions.forEach(moveLetterFromParserBoxToRendererBox);
     }
   }
