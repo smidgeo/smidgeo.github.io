@@ -34,6 +34,7 @@
 svg {
   font-size: 20px;
   font-family: futura, sans-serif;
+  border: 2px white dashed;
 }
 
 svg text {
