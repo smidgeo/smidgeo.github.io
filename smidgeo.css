@@ -83,13 +83,13 @@ ul {
 }
 
 .get-two.in-spotlight {
-  background-color: hsla(0, 80%, 25%, 1);
+  background-color: #C02F2F;
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
 }
 
 .get-three.in-spotlight {
-  background-color: hsla(100, 80%, 25%, 1);
+  background-color: hsla(137, 57%, 30%, 1);
   -webkit-transition: background-color 3s;
   transition: background-color 3s;
 }
