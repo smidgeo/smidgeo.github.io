@@ -1,6 +1,6 @@
 include config.mk
 
-APPDIR = /usr/share/nginx/html
+APPDIR = /usr/share/nginx/html/smidgeo.com
 
 HOMEDIR = $(shell pwd)
 
